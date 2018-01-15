@@ -4,6 +4,9 @@
  * @flow
  */
 
+// This enables Strict Mode, which adds improved error handling and disables some less-than-ideal
+'use strict';
+
 import React, { Component } from 'react';
 import {
   Platform,
