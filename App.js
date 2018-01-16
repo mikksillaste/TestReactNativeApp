@@ -7,25 +7,16 @@
 // This enables Strict Mode, which adds improved error handling and disables some less-than-ideal
 'use strict';
 
-import React, { Component } from 'react';
+// StackNavigator enables your app to transition from one screen to another with the new screen being placed on top of a stack.
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+    StackNavigator,
+} from 'react-navigation';
+import SearchPage from './SearchPage';
 
-// Sets up a platform-specific display message.
-const instructions = Platform.select({
-
+// This configures the SearchPage component as the initial component in the navigation stack.
+const App = StackNavigator({
+    Home: { screen: SearchPage },
 });
+export default App;
 
-// Defines the component that represents the UI.
-export default class App extends Component<{}> {
 
-}
-
-// Creates a style object that controls the component’s layout and appearance.
-const styles = StyleSheet.create({
-
-});
