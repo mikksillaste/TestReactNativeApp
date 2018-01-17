@@ -32,7 +32,6 @@ export default class SearchPage extends Component<{}> {
     };
 // render is a great demonstration of JSX and the structure it provides. Along with the style, you can very easily visualize the UI constructed by this component: a container with two text labels.
     render() {
-        console.log('SearchPage.render');
         return (
             <View style={styles.container}>
                 <Text style={styles.description}>
@@ -46,13 +45,11 @@ export default class SearchPage extends Component<{}> {
                     <TextInput
                         underlineColorAndroid={'transparent'}
                         style={styles.searchInput}
-                        value={this.state.searchString}
-                        onChange={this._onSearchTextChanged}
                         placeholder='Search via name or postcode'/>
                     <Button
                         onPress={() => {}}
                         color='#48BBEC'
-                        title='Go'
+                        title='Go'  
                     />
                 </View>
                 <Image source={require('./Resources/house.png')} style={styles.image}/>
