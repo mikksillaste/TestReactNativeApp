@@ -65,7 +65,8 @@ export default class SearchPage extends Component<{}> {
     _handleResponse = (response) => {
         this.setState({ isLoading: false , message: '' });
         if (response.application_response_code.substr(0, 1) === '1') {
-            console.log('Properties found: ' + response.listings.length);
+            // This navigates to your newly added route and passes in the listings data from the API request via the params argument.
+            this.props.navigation.navigate('Results', {listings: response.listings});
         } else {
             this.setState({ message: 'Location not recognized; please try again.'});
         }
